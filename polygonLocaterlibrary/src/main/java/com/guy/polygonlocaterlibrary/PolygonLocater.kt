@@ -112,7 +112,14 @@ object PolygonLocater {
     }
 
     /**
-     * Same as whichCountry(), but returns full country information.
+     * Returns CountryInfo, for example:
+     * CountryInfo(name="Israel", alpha2="IL", alpha3="ISR")
+     * CountryInfo(name="Australia", alpha2="AU", alpha3="AUS")
+     * CountryInfo(name="United States", alpha2="US", alpha3="USA")
+     * Returns null if the point is not inside any country.
+     * @see CountryInfo
+     * @see Country
+     *
      */
     fun whichCountryInfo(
         lat: Double,
